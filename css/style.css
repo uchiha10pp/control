@@ -1,0 +1,65 @@
+:root {
+    --blanco: #ffffff;
+    --oscuro: #212121;
+    --gris: #757575;
+  }
+  
+  html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+  }
+
+
+
+body {
+    font-size: 1.6rem;
+    font-family: 'Noto Serif', serif;
+    background-image: url(../imagen/fondo2.jpg);
+    background-repeat: no-repeat;
+}
+
+
+.cabecera_login {
+    font-size: 5rem;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 13%;
+    margin-bottom: 2rem;
+}
+
+.login {
+    
+    font-weight: normal;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon_input{
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    border-radius: 0.8rem;
+    width: 30%;
+}
+
+.icon_input::placeholder {
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900;
+    position: 10rem center;
+}
+.icon_input:focus {
+    outline: none;
+}
+
+.boton {
+    width: 15%;
+    padding: 1.5rem;
+    border-radius: 0.8rem;
+    text-transform: uppercase;
+}
+
+.boton:hover {
+    cursor: pointer;
+  }
