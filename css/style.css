@@ -1,7 +1,7 @@
 :root {
     --blanco: #ffffff;
     --oscuro: #212121;
-    --gris: #757575;
+    --gris: #1D2F51;
   }
   
   html {
@@ -16,6 +16,7 @@ body {
     font-family: 'Noto Serif', serif;
     background-image: url(../imagen/fondo2.jpg);
     background-repeat: no-repeat;
+    background-size: cover;
 }
 
 
@@ -37,29 +38,58 @@ body {
     justify-content: center;
 }
 
+.ayuda {
+    text-transform: capitalize;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ayuda input[type = "checkbox"] {
+
+    margin-right: 0.3rem;
+}
+
+.ayuda input[type = "checkbox"]:hover {
+    cursor: pointer;  
+}
+
+.ayuda a {
+    margin-left: 8rem;
+}
+
 .icon_input{
+    border: none;
     margin-bottom: 2rem;
     padding: 1.5rem;
     border-radius: 0.8rem;
     width: 30%;
+    text-align: center;
 }
 
 .icon_input::placeholder {
     font-family: "Font Awesome 5 Free"; 
-    font-weight: 900;
-    position: 10rem center;
+    font-weight: 900;    
 }
+
 .icon_input:focus {
     outline: none;
 }
 
 .boton {
+    background-color: var(--gris);
+    color: var(--blanco);
+    border: none;
     width: 15%;
-    padding: 1.5rem;
+    padding: 1.3rem;
+    margin-bottom: 2rem;
     border-radius: 0.8rem;
     text-transform: uppercase;
+
 }
 
 .boton:hover {
     cursor: pointer;
   }
+
+
