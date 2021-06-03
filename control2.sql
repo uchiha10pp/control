@@ -22,6 +22,7 @@ INSERT INTO alumnos (Nombre, Apellido, Sexo, FechaNacimiento, Prueba, FechaRegis
 
 
 drop database covid;
+drop table login;
   
 create database covid;
 use covid;    
@@ -55,12 +56,10 @@ CREATE TABLE inspectores (
   FechaRegistro varchar(20)
 );
 
-INSERT INTO inspectores (Nombre, Apellido, Sexo, Prueba, FechaRegistro) VALUES ('nilton', 'reyes rodriguez', 1, 1,'2021-06-01'),
-('lucia', 'rodriguez gonzales', 2, 2,'2021-06-01'),
-('tula', 'rodriguez gonzales', 1, 1,'2021-06-01'),
+INSERT INTO inspectores (Nombre, Apellido, Sexo, Prueba, FechaRegistro) VALUES ('eduardo', 'rodriguez patiño', 1, 1,'2021-06-01'),
+('lucia', 'rodriguez gonzales', 2, 1,'2021-06-01'),
 ('pedro', 'suarez lopez', 1, 2,'2021-06-02'),
-('pedro', 'lazarte ortega', 1, 1,'2021-06-02'),
-('timoteo', 'huaman capcha', 1, 1,'2021-06-02');
+('raul', 'perez angulo', 1, 1,'2021-06-02');
     
     
 CREATE TABLE personales (
@@ -70,15 +69,11 @@ CREATE TABLE personales (
   Sexo tinyint(4),
   FechaNacimiento varchar(20),
   Prueba tinyint(4),
-  FechaRegistro varchar(20),
-  dni char(8)
+  FechaRegistro varchar(20)
 );
 
-INSERT INTO personales (Nombre, Apellido, Sexo, FechaNacimiento, Prueba, FechaRegistro, dni) VALUES ('nilton', 'reyes rodriguez', 1, '1989-02-11', 1,'2021-06-01', '88884444'),
-('tula', 'rodriguez gonzales', 2, '1985-04-11', 1,'2021-06-01', '88885555'),
-('pedro', 'lazarte ortega', 1, '1991-08-17', 1,'2021-06-02', '88885555'),
-('timoteo', 'huaman capcha', 1, '1989-03-15', 1,'2021-06-02', '88885555');
+INSERT INTO personales (Nombre, Apellido, Sexo, FechaNacimiento, Prueba, FechaRegistro) VALUES ('nilton', 'reyes rodriguez', 1, '1989-02-11', 1,'2021-06-01'),
+('tula', 'rodriguez gonzales', 2, '1985-04-11', 1,'2021-06-01'),
+('pedro', 'lazarte ortega', 1, '1991-08-17', 2,'2021-06-02'),
+('timoteo', 'huaman capcha', 1, '1989-03-15', 1,'2021-06-02');
     
-    
-SELECT * FROM inspectores;
-SELECT * FROM personales;

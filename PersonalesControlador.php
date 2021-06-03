@@ -36,6 +36,7 @@
 					$per->__SET('FechaNacimiento', $r->FechaNacimiento);
 					$per->__SET('Prueba', $r->Prueba);
 					$per->__SET('FechaRegistro', $r->FechaRegistro);
+					$per->__SET('dni', $r->dni);
 
 					$result[] = $per;
 				}
@@ -68,6 +69,8 @@
 				$per->__SET('FechaNacimiento', $r->FechaNacimiento);
 				$per->__SET('Prueba', $r->Prueba);
 				$per->__SET('FechaRegistro', $r->FechaRegistro);
+				$per->__SET('dni', $r->dni);
+
 
 				return $per;
 			} catch (Exception $e) 
@@ -94,7 +97,7 @@
 		{
 			try 
 			{
-				$sql = "UPDATE personales SET Nombre = ?, Apellido = ?, Sexo = ?, FechaNacimiento = ?, Prueba = ?, FechaRegistro = ?
+				$sql = "UPDATE personales SET Nombre = ?, Apellido = ?, Sexo = ?, FechaNacimiento = ?, Prueba = ?, FechaRegistro = ?, dni = ?
 					    WHERE id = ?";
 
 				$this->pdo->prepare($sql)
@@ -106,6 +109,7 @@
 						$data->__GET('FechaNacimiento'),
 						$data->__GET('Prueba'),
 						$data->__GET('FechaRegistro'),
+						$data->__GET('dni'),
 						$data->__GET('id')
 						)
 					);
@@ -119,8 +123,8 @@
 		{
 			try 
 			{
-			$sql = "INSERT INTO personales (Nombre,Apellido,Sexo,FechaNacimiento,Prueba,FechaRegistro) 
-			        VALUES (?, ?, ?, ?, ?, ?)";
+			$sql = "INSERT INTO personales (Nombre,Apellido,Sexo,FechaNacimiento,Prueba,FechaRegistro, dni) 
+			        VALUES (?, ?, ?, ?, ?, ?, ?)";
 
 			$this->pdo->prepare($sql)
 			     ->execute(
@@ -130,7 +134,9 @@
 					$data->__GET('Sexo'),
 					$data->__GET('FechaNacimiento'),
 					$data->__GET('Prueba'),
-					$data->__GET('FechaRegistro')
+					$data->__GET('FechaRegistro'),
+					$data->__GET('dni')
+
 					)
 				);
 			} catch (Exception $e) 

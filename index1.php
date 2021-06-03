@@ -53,8 +53,9 @@ if(isset($_REQUEST['action']))
 <!DOCTYPE html>
 <html lang="es">
 	<head>
-		<title>Anexsoft</title>
+		<title>control</title>
         <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
+        <link rel="icon" href="imagen/icon3.png">
 	</head>
     <body style="padding:15px;">
 

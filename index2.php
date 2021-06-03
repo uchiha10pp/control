@@ -22,6 +22,7 @@ if(isset($_REQUEST['action']))
             $per->__SET('FechaNacimiento', $_REQUEST['FechaNacimiento']);
             $per->__SET('Prueba', $_REQUEST['Prueba']);
             $per->__SET('FechaRegistro', $_REQUEST['FechaRegistro']);
+            $per->__SET('dni', $_REQUEST['dni']);
 
 			$model->Actualizar($per);
 			header('Location: index2.php');
@@ -34,6 +35,7 @@ if(isset($_REQUEST['action']))
             $per->__SET('FechaNacimiento', $_REQUEST['FechaNacimiento']);
             $per->__SET('Prueba', $_REQUEST['Prueba']);
             $per->__SET('FechaRegistro', $_REQUEST['FechaRegistro']);
+            $per->__SET('dni', $_REQUEST['dni']);
 
 			$model->Registrar($per);
 			header('Location: index2.php');
@@ -55,8 +57,9 @@ if(isset($_REQUEST['action']))
 <!DOCTYPE html>
 <html lang="es">
 	<head>
-		<title>Anexsoft</title>
+		<title>Control</title>
         <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
+        <link rel="icon" href="imagen/icon3.png">
 	</head>
     <body style="padding:15px;">
 
@@ -109,6 +112,11 @@ if(isset($_REQUEST['action']))
                         </tr>
 
                         <tr>
+                            <th style="text-align:left;">Codigo</th>
+                            <td><input type="text" name="dni" value="<?php echo $per->__GET('dni'); ?>" required ="" style="width:100%;" /></td>
+                        </tr>
+
+                        <tr>
                             <td colspan="2">
                                 <button type="submit" class="pure-button pure-button-primary">Guardar</button>
                             </td>
@@ -125,6 +133,7 @@ if(isset($_REQUEST['action']))
                             <th style="text-align:left;">Nacimiento</th>
                             <th style="text-align:left;">Prueba</th>
                             <th style="text-align:left;">Registro</th>
+                            <th style="text-align:left;">Codigo</th>
                             <th></th>
                             <th></th>
                         </tr>
@@ -138,6 +147,7 @@ if(isset($_REQUEST['action']))
                             <td><?php echo $r->__GET('FechaNacimiento'); ?></td>
                             <td><?php echo strtoupper($r->__GET('Prueba')) == 1 ? 'P' : 'N'; ?></td>
                             <td><?php echo $r->__GET('FechaRegistro'); ?></td>
+                            <td><?php echo $r->__GET('dni'); ?></td>
                             <td>
                                 <a href="?action=editar&id=<?php echo $r->id; ?>">Editar</a>
                             </td>
